@@ -1,0 +1,41 @@
+1.
+-making coffee:
+open top of coffee maker
+INPUT cupnumber scoops of coffee grinds into filter
+INPUT cupnumber cups of water into coffee pot
+pour water into coffee maker
+close top of coffee maker
+return pot to coffee maker
+hit start
+once beeps enjoy coffee
+
+
+-washing dishes:
+WHILE dish is dirty
+ADD soap and water to dish
+scrub with sponge
+rinse with water
+END while
+dry dish
+REPEAT
+
+
+-making a phone call
+pick up phone
+INPUT number
+IF busy hang up
+ELSE IF no one answers leave a message then hang up
+ELSE someone picks up talk to them then hang up
+ENDIF
+
+
+2.
+- Netflix's algorithm for suggesting other movies based on what viewers have already watched.
+This makes them successful because users will continue to watch, since Netflix knows what they want.
+- Southwest Airlines algorithm for providing cheap flights and fast turnaround time.
+This makes them successful because customers know they are efficient for people looking for quick cheap flights from point to point.
+- SeatGeek's algorithm for finding the cheapest tickets to sporting events and concerts.
+This makes them successful because users can just go to one site and view all of the different prices in one place.
+
+3. An efficient algorithm would be one that uses minimal resources and reaches a solution in a timely manner.
+An inefficient algorithm might be one that has many steps, uses a lot of resources, and reaches a different solution every time. 
