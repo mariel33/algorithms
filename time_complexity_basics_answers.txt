@@ -1,0 +1,29 @@
+1. Time complexity is a function used to calculate the time it takes to execute a program.
+It describes the efficiency of an algorithm and the relationship between the time change and input size. 
+
+2. Runtime is the physical time duration of an algorithm.
+
+3. Runtime is expressed with the Big O function notation - O(f(n)). 
+To determine the runtime you add up how many instructions the algorithm will execute as a function of the size of its input. 
+Then you simplify the expression to the largest term and remove any constants. 
+
+4. 
+-Constant Growth Rate: O(1)
+-Logarithmic Growth Rate: O(log n)
+-Linear Growth Rate: O(n)
+-Log-linear Growth Rate: O(n log n)
+-Quadratic Growth Rate: O(n^2)
+-Exponential Growth Rate: O(2^n)
+-Factorial Growth Rate O(n!)
+
+5. 
+Exponential Growth Rate Example: Population of rabbits that grow 200% each year. 
+5 rabbits after 5 years would be 160 rabbits. 
+
+6. The time complexity of this code would be O(n) - linear growth. 
+
+7. The time complexity of this code would be O(n^2)- quadratic growth. 
+
+8. The time complexity of this code is O(2^n) - Exponential growth.
+
+9. The most efficient snippet of 6,7 or 8 would be 6, linear growth. 
