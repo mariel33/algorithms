@@ -1,0 +1,75 @@
+1. Recursion is a function that calls itself within the function, 
+while iteration loops through a sequence of numbers performing the same action on each.
+
+2. 
+- Factorial
+- Greatest common divisor
+- Tree traversal
+- Fibonacci
+- Quick sort
+
+3. You should use recursion when the algorithm can be defined as a combination of smaller problems starting with known cases.
+An algorithm that requires a pass over a data set should use an iterative solution.
+However, you should also weigh the costs of memory space and performance since recursion can run slower and are vulnerable to crashing.
+
+4. 
+Factorial: Both recursion and iteration will fail if the number is less than 0. 
+While recursion continues to call the function until the base case (number is 0 or 1) is reached, 
+iteration will loop through the numbers given, performing the instructions  until the condition becomes false. 
+
+Maximum: The recursive function is more complicated than the iterative function.
+Both will fail when the data set is empty. 
+Recursion will take out the first number in the data set then continue to call itself with the remaining numbers, 
+then it goes back through the numbers removed, comparing them and only saving the larger, and ultimately returning the largest number.
+Iteration seems more efficient and sets a variable of currentMaximum, loops through the data set and compares them to currentMaximum and if any number is larger it gets set to currentMaximum.
+
+Fibonacci: The recursive version of the Fibonacci sequence has 2 base cases and then calls itself with 2 less than the current number then calls itself again with 1 less than the current number and adds the two together.
+The iterative version declares two vairables to keep track of, and sets the condition to loop only when it is greater than 3.
+The instructions in the for loop are similar to the recursive function.
+
+5. 
+function countItems(arr){
+    if (!("0" in arr)) {
+        return 0;
+    }
+    return countItems(arr.slice(0, -1)) + 1; 
+}
+
+6. 
+var firstCharacter = function(str) {
+    return str.split(' ').join('').slice(0, 1);
+};
+
+var lastCharacter = function(str) {
+    return str.split(' ').join('').slice(-1);
+};
+
+var middleCharacters = function(str) {
+    return str.split(' ').join('').slice(1, -1);
+};
+
+var isPalindrome = function(str) {
+    if (str.length <= 1) {
+        return true;
+    }
+    else if (firstCharacter(str) !== lastCharacter(str)) {
+        return false;
+    }
+    else {
+    var newStr = (middleCharacters(str));
+    var result = isPalindrome(newStr);
+    return result;
+    };
+};
+
+7.
+function findCat(arr){
+    if (arr.length === 0) {
+        return "Done Searching";
+    }
+    else {
+        var newArr = arr.pop();
+        var result = findCat(newArr);
+        return result;
+    }
+}
