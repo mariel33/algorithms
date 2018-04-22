@@ -1,0 +1,48 @@
+1. A real-life scenario of a linear search would be looking for a specific salad dressing at the grocery store.
+They are not in alphabetical order so you search each bottle one by one looking for the right one.
+
+2. A real-life scenario of a binary search would be searching for a book at the library.
+They are all in alphabetical order so we look at the number of racks, find the middle rack and 
+determine if we need to omit the first half of the racks or the second and repeat this process until we find our book.
+
+3. It would take 7 iterations to find the value G using linear search.
+
+4. It would take 3 iterations to find the value G using binary search.
+
+5. Since you cannot use a binary search on an unsorted list, you would need to use a linear search.
+However, it would be much more efficient to sort the data and then use a binary search since it is so large and would take so long to search through each item.
+
+6. A binary search would be the algorithm to use in a sorted collection of a million items. 
+It will quickly discard half of the data that we don't need to search through.
+
+Programming Assignment:
+
+1. function dictionarySearch(arr, targetWord) {
+    var first = arr[0];
+    var last = arr.length - 1;
+
+    while (first <= last) {
+        var mid = (first + last) / 2;
+        if (arr[mid] > targetWord) {
+            last = mid - 1;
+        }
+        else if (arr[mid] < targetWord) {
+            first = mid + 1;
+        }
+        else {
+            return mid;
+        }
+    }
+
+    return "word not found";
+}
+
+2. 
+function findFish(fishArray, targetFish) {
+    for(var i = 0; i < fishArray.length; i++) {
+        if (fishArray[i] === targetFish) {
+            return "I've got the fish";
+        }
+    }
+    return "the fish got away";
+}
