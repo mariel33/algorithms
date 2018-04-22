@@ -1,0 +1,64 @@
+1.
+function bubbleSort(collection)
+    REPEAT
+        SET swapped to false;
+        FOR i = first index of collection to last index of collection - 1
+            IF collection[index] > collection[index +1] THEN
+                SET temp to collection[index]
+                SET collection[index] to collection[index + 1]
+                SET collection[index + 1] to temp
+                SET swapped to true;
+            END IF
+        END FOR
+    UNTIL swapped is false
+
+    RETURN collection
+END function
+
+2. 
+function quickSort(collection)
+    SET left to 0
+    SET right to collection - 1
+    IF left < right THEN
+        SET pivot to right
+        SET partitionIndex to partition WITH collection, pivot, left, right
+        CALL quickSort WITH collection, left, partitionIndex - 1;
+        CALL quickSort WITH collection, partitionIndex + 1, right;
+    ELSE 
+        RETURN collection
+    END IF
+END function
+
+function partition(collection, pivot, left, rght)
+    SET pivotValue to collection[pivot]
+    SET partitionIndex to left
+    FOR i = left to right of collection
+        IF collection[i] < pivotValue THEN
+        CALL swap WITH collection, i, partitionIndex
+        END IF
+    END FOR
+    CALL swap WITH collection, right, partitionIndex
+    RETURN partitionIndex
+END function
+
+function swap(collection, i, j) 
+    SET temp to collection[i]
+    SET collection[i] to collection[j]
+    SET collection[j] to temp
+END function
+
+3. The time complexity of both merge sort and quick sort is O(n log n).
+Merge sort is more efficient because it goes through less comparisons than other sorting methods, which compare items one by one.
+Quick sort is very efficient because it uses less memory than other sorting methods and handles larger inputs better. 
+
+
+4. Bucket sort takes an array of numbers and places them into n buckets. 
+Once all of the numbers are in buckets, you sort each bucket by using a different sorting method (insert sort).
+Then you concatenate all of the sorted buckets back into the original array. 
+Bucket sort is useful when the input is uniformly distributed over a range. 
+    
+
+
+     
+
+
